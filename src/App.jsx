@@ -1,3 +1,6 @@
+import hair from "./images/hair.jpg.jpg"
+import spa from "./images/spa.jpg.jpg"
+import bridal from "./images/bridal.jpg.jpg"
 import {
   FaSpa,
   FaCut,
@@ -88,19 +91,34 @@ function App() {
         <div className="grid md:grid-cols-3 gap-8">
 
           <div className="bg-[#D4BBAC] p-8 rounded-3xl shadow-lg hover:scale-105 transition duration-300">
-            <FaCut className="text-5xl mb-6 text-[#442913]" />
+            <img
+  src={hair}
+  alt="Hair Styling"
+  className="h-52 w-full object-cover rounded-2xl mb-6"
+/>
+<FaCut className="text-5xl mb-6 text-[#442913]" />
             <h3 className="text-3xl font-bold mb-4">Hair Styling</h3>
             <p>Professional haircut and styling services.</p>
           </div>
 
           <div className="bg-[#D4BBAC] p-8 rounded-3xl shadow-lg hover:scale-105 transition duration-300">
-           <FaSpa className="text-5xl mb-6 text-[#442913]" />
+           <img
+  src={spa}
+  alt="Spa"
+  className="h-52 w-full object-cover rounded-2xl mb-6"
+/>
+<FaSpa className="text-5xl mb-6 text-[#442913]" />
             <h3 className="text-3xl font-bold mb-4">Spa Therapy</h3>
             <p>Relaxing spa treatments for complete refreshment.</p>
           </div>
 
           <div className="bg-[#D4BBAC] p-8 rounded-3xl shadow-lg hover:scale-105 transition duration-300">
-            <FaCrown className="text-5xl mb-6 text-[#442913]" />
+           <img
+  src={bridal}
+  alt="Bridal"
+  className="h-52 w-full object-cover rounded-2xl mb-6"
+/>
+ <FaCrown className="text-5xl mb-6 text-[#442913]" />
             <h3 className="text-3xl font-bold mb-4">Bridal Makeup</h3>
             <p>Luxury bridal beauty packages and makeup services.</p>
           </div>
