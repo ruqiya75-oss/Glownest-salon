@@ -250,32 +250,54 @@ export default function PremiumGlowNestHomepage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((item) => (
-            <div
-              key={item}
-              className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-[30px] p-8 hover:-translate-y-2 transition-all duration-500"
-            >
-              <div className="flex gap-1 text-[#D4B483] mb-6">
-                ★★★★★
-              </div>
+          {[
+  {
+    name: 'Emma Wilson',
+    role: 'Fashion Influencer',
+    review:
+      'GlowNest gave me the most luxurious salon experience I have ever had. The atmosphere and service were absolutely premium.',
+    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+  },
+  {
+    name: 'Sophia Carter',
+    role: 'Beauty Blogger',
+    review:
+      'The hairstyling and skincare treatments were exceptional. I felt confident, refreshed, and completely transformed.',
+    image: 'https://randomuser.me/api/portraits/women/45.jpg',
+  },
+  {
+    name: 'Olivia Bennett',
+    role: 'Entrepreneur',
+    review:
+      'Professional staff, elegant interiors, and outstanding beauty treatments made GlowNest my favorite luxury salon.',
+    image: 'https://randomuser.me/api/portraits/women/32.jpg',
+  },
+].map((testimonial, item) => (
+  <div
+    key={item}
+    className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-[30px] p-8 hover:-translate-y-2 transition-all duration-500"
+  >
+    <div className="flex gap-1 text-[#D4B483] mb-6">
+      ★★★★★
+    </div>
 
-              <p className="leading-8 text-gray-200 mb-8">
-                GlowNest provides an unforgettable luxury salon experience with exceptional service and premium care.
-              </p>
+    <p className="leading-8 text-gray-200 mb-8">
+      {testimonial.review}
+    </p>
 
-              <div className="flex items-center gap-4">
-                <img
-                  src="https://randomuser.me/api/portraits/women/68.jpg"
-                  className="w-14 h-14 rounded-full"
-                />
+    <div className="flex items-center gap-4">
+      <img
+        src={testimonial.image}
+        className="w-14 h-14 rounded-full"
+      />
 
-                <div>
-                  <h4 className="font-semibold">Emma Wilson</h4>
-                  <p className="text-sm text-gray-400">Fashion Influencer</p>
-                </div>
-              </div>
-            </div>
-          ))}
+      <div>
+        <h4 className="font-semibold">{testimonial.name}</h4>
+        <p className="text-sm text-gray-400">{testimonial.role}</p>
+      </div>
+    </div>
+  </div>
+))}
         </div>
       </section>
 
@@ -343,17 +365,30 @@ export default function PremiumGlowNestHomepage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {["Glow Elite", "Bridal Luxe", "Royal Spa"].map((plan, index) => (
+          {[
+  {
+    plan: 'Glow Elite',
+    price: '₹4,999',
+  },
+  {
+    plan: 'Bridal Luxe',
+    price: '₹6,999',
+  },
+  {
+    plan: 'Royal Spa',
+    price: '₹8,999',
+  },
+].map((item, index) => (
             <div
               key={index}
               className="bg-white rounded-[35px] p-10 shadow-xl hover:-translate-y-3 transition-all duration-500 border border-[#F0E7E2]"
             >
               <h3 className="text-3xl font-serif text-[#2A1F1B] mb-6">
-                {plan}
+                {item.plan}
               </h3>
 
               <h4 className="text-5xl font-bold text-[#D4B483] mb-8">
-                ₹4,999
+                {item.price}
               </h4>
 
               <ul className="space-y-4 text-gray-600 mb-10">
